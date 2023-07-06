@@ -1,0 +1,49 @@
+// main: style.less
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: @red;
+    transform: rotate(180deg);
+    position: relative;
+    visibility: hidden;
+    animation: reunion 20s linear 1 normal running forwards;
+    z-index: 2;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: @red;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .heart::before {
+    top: -50px;
+    left: 0;
+  }
+  
+  .heart::after {
+    top: 0;
+    left: -50px;
+  }
+  
+  @keyframes reunion {
+    0% {
+      visibility: hidden;
+    }
+    25% {
+      visibility: hidden;
+    }
+    50% {
+      transform: scale(0.5) rotate(10deg);
+      visibility: visible;
+    }
+    100% {
+      visibility: visible;
+      transform: scale(3) rotate(48deg);
+    }
+  }

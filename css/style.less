@@ -1,0 +1,82 @@
+// compress: false
+
+@import "vars";
+@import "mixins";
+
+html {
+    height: 100%;
+    background:@white;
+    display: flex;
+    justify-content: center;
+    animation: mood 20s linear 1 normal 1s;
+  }
+  
+  @keyframes mood {
+    0% {
+      background-color:@cherry;
+    }
+    25% {
+      background-color: @red;
+    }
+    50% {
+      background-color:@blue;
+    }
+    100% {
+      background-color:@light_blue;
+    }
+  }
+  //Солнце
+  html::before {
+    content: "";
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    background-color: @Dark_blu;
+    animation: sun 15s linear 1 normal forwards;
+    box-shadow: 0px 0px 5px 20px yellow;
+  }
+  html::before {
+    content: "";
+    position: absolute;
+    top: 400px;
+    left: 10px;
+  }
+  
+  @keyframes sun {
+    0% {
+      background-color: @Dark_blu;
+      opacity: 0;
+    }
+    15% {
+      top: 300px;
+      background-color: @grey;
+      opacity: 0.1;
+    }
+    25% {
+      background-color:@pale_yellowish ;
+      top: 280px;
+      opacity: 0.5;
+    }
+    50% {
+      top: 180px;
+      background-color: @brilliant_yellow;
+      opacity: 0.8;
+    }
+    100% {
+      background-color: @yellow;
+      top: 100px;
+      left: 80%;
+    }
+  }
+
+// Blocks
+@import "cloud";
+@import "man";
+@import "girl";
+@import "girl__arm";
+@import "man__arm";
+@import "zip";
+@import "heart";

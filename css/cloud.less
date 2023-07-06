@@ -1,0 +1,73 @@
+// main: style.less
+
+.cloud {
+    position: relative;
+    width: 150px;
+    height: 90px;
+    margin: 3em;
+    background: @Bright_blue;
+    border-color: @Bright_blue;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 850px 0px 0 0px @Bright_blue, 500px 104px 0 0px @Bright_blue,
+      1200px 180px 0px 0px @Bright_blue, 700px 240px 0px 0px@Bright_blue,
+      150px 300px 0px 0px@Bright_blue, 1500px 400px 0px 0px@Bright_blue;
+    display: inline-block;
+    z-index: 1;
+    animation-name: cloud;
+    animation-duration: 15s;
+    transition-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    visibility: hidden;
+  }
+  
+  .cloud:after,
+  .cloud:before {
+    content: "";
+    position: absolute;
+    bottom: -0.11em;
+    background: inherit;
+    border-width: 0.25em;
+    border-color: @Bright_blue;
+    box-shadow: 850px 0px 0px 0px @Bright_blue, 500px 104px 0 0px @Bright_blue,
+      1200px 180px 0px 0px @Bright_blue, 700px 240px 0px 0px@Bright_blue,
+      150px 300px 0px 0px@Bright_blue, 1500px 400px 0px 0px@Bright_blue;
+    display: inline-block;
+  }
+  .cloud:before {
+    right: 80%;
+    width: 80%;
+    height: 80%;
+    border-right: none;
+    border-radius: 50% 50% 0;
+    display: inline-block;
+  }
+  .cloud:after {
+    left: 80%;
+    width: 60%;
+    height: 60%;
+    border-left: none;
+    border-radius: 50% 50% 50% 0;
+    display: inline-block;
+  }
+  
+  @keyframes cloud {
+    0% {
+      visibility: visible;
+      right: 0%;
+    }
+    15% {
+      opacity: 0.5;
+    }
+    20% {
+      opacity: 0.1;
+    }
+    30% {
+      opacity: 0;
+    }
+  
+    40% {
+      visibility: hidden;
+      right: 300%;
+    }
+  }

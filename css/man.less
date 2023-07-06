@@ -1,0 +1,78 @@
+// main: style.less
+
+.man {
+    position: relative;
+    top: 130px;
+    left: 500px;
+    width: 50px;
+    height: 89px;
+    border-radius: 9px;
+    box-shadow: 104px 195px 0 25px @green, 104px 140px 0 -10px @green,
+      130px 280px 0px -15px@green, 80px 280px 0px -15px@green;
+    transform: skew(-10deg, -10deg);
+    z-index: 3;
+    animation: boy 20s linear 1 normal running 1s forwards;
+  }
+  .man::before {
+    content: "\1F60A";
+    background-color: @green;
+    border-radius: 50px;
+    transform: scale(4);
+    position: absolute;
+    top: 119px;
+    left: 118px;
+  }
+  
+  .man::after {
+    content: "\1F610";
+    background-color: @green;
+    border-radius: 50px;
+    transform: scale(4);
+    position: absolute;
+    top: 119px;
+    left: 118px;
+    animation: face 20s linear 1 normal running 1s forwards;
+  }
+  
+  @keyframes boy {
+    0% {
+    }
+    25% {
+    }
+    50% {
+    }
+    70% {
+    }
+    90% {
+      transform: rotateY(20deg);
+    }
+    100% {
+      transform: rotateY(60deg);
+      left: 20px;
+    }
+  }
+  
+  .man__arm {
+    position: absolute;
+    width: 15px;
+    height: 100px;
+    border-radius: 100% / 95% 100% 80% 65%;
+    background: @green;
+    transform: translateX(-50%) rotate(-149deg);
+    left: 59px;
+    top: 175px;
+    animation: hands 20s linear 1 normal running 1s forwards;
+  }
+  .man__arm::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 110px;
+    border-radius: 100% / 90% 100% 80% 65%;
+    background: @green;
+    transform: translateX(-50%) rotate(130deg);
+    left: -107px;
+    top: 56px;
+    display: inline-block;
+    z-index: 2;
+  }

@@ -1,0 +1,58 @@
+// main: style.less
+
+.lightning {
+    position: relative;
+    top: 150px;
+    left: 50px;
+    width: 0;
+    height: 0;
+    border-bottom: 60px solid @orange;
+    border-left: 30px solid transparent;
+    transform: skewX(-29deg) translate(-50%, -50%);
+    animation: zip 20s linear 1 normal running;
+    z-index: 2;
+  }
+  
+  .lightning::before {
+    content: "";
+    position: absolute;
+    bottom: -110px;
+    right: -19px;
+    width: 0;
+    height: 0;
+    border-top: 60px solid @orange;
+    border-right: 30px solid transparent;
+    animation: zip 20s linear 1 normal running;
+  }
+  
+  .lightning::after {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    right: 1px;
+    width: 0;
+    height: 0;
+    border-top: 60px solid @orange;
+    border-left: 25px solid transparent;
+    transform: skewX(-26deg);
+    z-index: 1;
+    animation: zip 20s linear infinite normal running;
+  }
+  
+  @keyframes zip {
+    0% {
+    }
+    15% {
+    }
+    20% {
+    }
+    25% {
+      visibility: hidden;
+    }
+    50% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
